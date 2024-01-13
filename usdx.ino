@@ -10,8 +10,8 @@
 #define DIAG             1   // Hardware diagnostics on startup (only disable when your rig is working)
 #define KEYER            1   // CW keyer
 #define CAT              1   // CAT-interface
-#define F_XTAL    27005000   // 27MHz SI5351 crystal
-//#define F_XTAL  25004000   // 25MHz SI5351 crystal  (enable for WB2CBA-uSDX, SI5351 break-out board or uSDXDuO)
+//#define F_XTAL    27005000   // 27MHz SI5351 crystal
+#define F_XTAL  25004000   // 25MHz SI5351 crystal  (enable for WB2CBA-uSDX, SI5351 break-out board or uSDXDuO)
 //#define F_XTAL  25000000   // 25MHz SI5351 crystal  (enable for 25MHz TCXO)
 //#define SWAP_ROTARY    1   // Swap rotary direction (enable for WB2CBA-uSDX)
 //#define QCX            1   // Supports older (non-SDR) QCX HW modifications (QCX, QCX-SSB, QCX-DSP with I/Q alignment-feature)
@@ -4052,7 +4052,7 @@ void show_banner(){
   const char* cap_label[] = { "SSB", "DSP", "SDR" };
   if(ssb_cap || dsp_cap){ lcd.print('-'); lcd.print(cap_label[dsp_cap]); }
 #else
-  lcd.print(F("uSDX"));
+  lcd.print(F("uSDX CL6VHM"));
 #endif //QCX
   lcd.print('\x01'); lcd_blanks(); lcd_blanks();
 }
